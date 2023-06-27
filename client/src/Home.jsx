@@ -16,11 +16,24 @@ function Home() {
   return (
     <div>
       <h2>Crud app</h2>
-      {data.map((item) => (
-        <p key={item.id}>
-          {item.name} {item.age}
-        </p>
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.age}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
