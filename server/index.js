@@ -23,9 +23,9 @@ const db = mysql.createConnection({
 
 app.get("/user", (req, res) => {
   const sql = "SELECT * FROM tb_data";
-  db.query(sql, (err, wow) => {
+  db.query(sql, (err, result) => {
     if (err) return res.json(err);
-    return res.json(wow);
+    return res.json(result);
   });
 });
 

@@ -12,17 +12,15 @@ function Home() {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(
-    data.map((e) => {
-      return e.name;
-    })
-  );
+
   return (
     <div>
       <h2>Crud app</h2>
-      {data.map((e) => {
-        return e.name;
-      })}
+      {data.map((item) => (
+        <p key={item.id}>
+          {item.name} {item.age}
+        </p>
+      ))}
     </div>
   );
 }
