@@ -4,4 +4,11 @@
 - mysql
 - express (nodejs)
 
-- https://www.canva.com/design/DAFmnQTLfDg/LlO81u6ilaMfC0Eowpxa5A/edit?analyticsCorrelationId=723df55d-99a1-4cbc-8858-c785c69fc6ac
+- https://www.canva.com/design/DAFm7QGYn8M/04lRSaBzr4ChQ5IPF0tBTw/edit?utm_content=DAFm7QGYn8M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## todo
+
+- crud
+- login & register
+
+## done
