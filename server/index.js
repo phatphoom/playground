@@ -5,6 +5,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.use(express.json());
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -13,13 +14,23 @@ const db = mysql.createConnection({
   database: "mydb",
 });
 
-// app.get("/", (req, res) => {
-//   return res.json({
-//     group: "twice",
-//     member: 9,
-//     nation: "korea japan taiwan",
-//   });
-// });
+app.post("/post", (req, res) => {
+  const name = req.body.name;
+  const age = req.body.age;
+  const country = req.body.country;
+
+  db.query(
+    "INSERT INTO tb_data (name, age, country) VALUES (?,?,?)",
+    [name, age, country],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send("Values Inserted");
+      }
+    }
+  );
+});
 
 app.get("/user", (req, res) => {
   const sql = "SELECT * FROM tb_data";
